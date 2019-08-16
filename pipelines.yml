@@ -94,9 +94,9 @@ pipelines:
 #             - name: artifactoryIntegration  
           inputSteps:
             - name: test1
-          inputResources:
-            - name: vijay_git
-              trigger: true    # default true
+#           inputResources:
+#             - name: vijay_git
+#               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
           runtime:       
@@ -132,9 +132,9 @@ pipelines:
 #             - name: artifactoryIntegration  
           inputSteps:
             - name: test2
-          inputResources:
-            - name: vijay_git
-              trigger: true    # default true
+#           inputResources:
+#             - name: vijay_git
+#               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
           runtime:       
@@ -170,9 +170,9 @@ pipelines:
 #             - name: artifactoryIntegration  
           inputSteps:
             - name: test3
-          inputResources:
-            - name: vijay_git
-              trigger: true    # default true
+#           inputResources:
+#             - name: vijay_git
+#               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
           runtime:       
