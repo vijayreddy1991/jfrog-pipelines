@@ -14,7 +14,7 @@ resources:
 #         include: 
 #         exclude: 
       buildOn:  # optional
-         commit: true
+         commit: false
          pullRequestCreate: false
          pullRequestClose: false
          releaseCreate: false
