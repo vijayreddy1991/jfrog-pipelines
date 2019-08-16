@@ -2,7 +2,6 @@ resources:
   - name: repo
     type: GitRepo
     configuration:
-      integrationName: vijay_github
       gitProvider: vijay_github
       path: vijayreddy1991/jfrog-pipelines
       files:  # optional
