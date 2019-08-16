@@ -76,6 +76,9 @@ pipelines:
 #                 sourceRepository: docker # required if registry is artifactory
 #                 region: <string> # required if registry is AWS
 #                 options:
+        execution:
+          onExecute:
+            - echo "test1"  
                 
       - name: test2
         type: Bash
