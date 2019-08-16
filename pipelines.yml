@@ -3,13 +3,13 @@ resources:
     type: GitRepo
     configuration:
       integrationName: vijay_github
-      gitProvider: gitIntegration
+      gitProvider: vijay_github
       path: vijayreddy1991/jfrog-pipelines
       files:  # optional
         include: pipelines.yml
         exclude: readme
-        except: <regular expression>
-        only: <regular expression>
+#         except: <regular expression>
+#         only: <regular expression>
       branches:  # optional
         include: master
         exclude: git
