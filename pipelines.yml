@@ -35,9 +35,9 @@ pipelines:
             language: go
             versions:
               - 1.12.6
-          custom:
-            name: drydock/u18node
-            tag: master
+#           custom:
+#             name: drydock/u18node
+#             tag: master
 #             registry: <private custom image registry integration>
 #             sourceRepository: <artifactory source repo>
 #             region: <aws ECR region> 
@@ -69,9 +69,9 @@ pipelines:
                 language: go
                 versions:
                   - 1.12.6
-              custom:
-                name: drydock/u16node
-                tag: master
+#               custom:
+#                 name: drydock/u16node
+#                 tag: master
 #                 registry: art
 #                 sourceRepository: docker # required if registry is artifactory
 #                 region: <string> # required if registry is AWS
@@ -105,9 +105,9 @@ pipelines:
                 language: go
                 versions:
                   - 1.12.6
-              custom:
-                name: drydock/u16node
-                tag: master
+#               custom:
+#                 name: drydock/u16node
+#                 tag: master
 #                 registry: art
 #                 sourceRepository: docker # required if registry is artifactory
 #                 region: <string> # required if registry is AWS
@@ -144,9 +144,9 @@ pipelines:
                 language: go
                 versions:
                   - 1.12.6
-              custom:
-                name: drydock/u16node
-                tag: master
+#               custom:
+#                 name: drydock/u16node
+#                 tag: master
 #                 registry: art
 #                 sourceRepository: docker # required if registry is artifactory
 #                 region: <string> # required if registry is AWS
@@ -183,9 +183,9 @@ pipelines:
                 language: go
                 versions:
                   - 1.12.6
-              custom:
-                name: drydock/u16node
-                tag: master
+#               custom:
+#                 name: drydock/u16node
+#                 tag: master
 #                 registry: art
 #                 sourceRepository: docker # required if registry is artifactory
 #                 region: <string> # required if registry is AWS
