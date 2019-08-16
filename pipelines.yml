@@ -1,5 +1,5 @@
 resources:
-  - name: vijay_git
+  - name: repo
     type: GitRepo
     configuration:
       integrationName: vijay_github
@@ -60,7 +60,7 @@ pipelines:
 #             - name: dockerHubIntegration
 #             - name: artifactoryIntegration  
           inputResources:
-            - name: vijay_git
+            - name: repo
               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
