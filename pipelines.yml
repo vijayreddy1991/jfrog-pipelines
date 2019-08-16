@@ -34,7 +34,7 @@ pipelines:
           auto:
             language: go
             versions:
-              - 1.12.6
+              - 1.12.5
 #           custom:
 #             name: drydock/u18node
 #             tag: master
@@ -68,7 +68,7 @@ pipelines:
               auto:
                 language: go
                 versions:
-                  - 1.12.6
+                  - 1.12.5
 #               custom:
 #                 name: drydock/u16node
 #                 tag: master
@@ -107,7 +107,7 @@ pipelines:
               auto:
                 language: go
                 versions:
-                  - 1.12.6
+                  - 1.12.5
 #               custom:
 #                 name: drydock/u16node
 #                 tag: master
@@ -146,7 +146,7 @@ pipelines:
               auto:
                 language: go
                 versions:
-                  - 1.12.6
+                  - 1.12.5
 #               custom:
 #                 name: drydock/u16node
 #                 tag: master
@@ -185,7 +185,7 @@ pipelines:
               auto:
                 language: go
                 versions:
-                  - 1.12.6
+                  - 1.12.5
 #               custom:
 #                 name: drydock/u16node
 #                 tag: master
