@@ -1,1 +1,194 @@
+resources:
+  - name: gitResource
+    type: GitRepo
+    configuration:
+      integrationName: vijay_github
+      gitProvider: gitIntegration
+      path: vijayreddy1991/jfrog-pipelines
+      files:  # optional
+        include: pipelines.yml
+        exclude: readme
+        except: <regular expression>
+        only: <regular expression>
+      branches:  # optional
+        include: master
+        exclude: git
+#       tags:  # optional
+#         include: 
+#         exclude: 
+      buildOn:  # optional
+         commit: true
+         pullRequestCreate: true
+         pullRequestClose: false
+         releaseCreate: false
+         tagCreate: false
+      shallowDepth: 10  # optional 
+      
+pipelines:
+  - name: jfrog_pipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          ENV1: value1
+          ENV2: value2    
+      runtime:       
+        type: image       #<image/host>
+        image:
+          auto:
+            language:go
+            versions:1.12.6
+          custom:
+            name: drydock/u18node
+            tag: master
+#             registry: <private custom image registry integration>
+#             sourceRepository: <artifactory source repo>
+#             region: <aws ECR region> 
+#             options:
+    steps:
+      - name: test1
+        type: Bash
+        configuration:
+          affinityGroup: bldGroup 
+          priority: 0
+          timeoutSeconds: 50000
+          nodePool: ubuntu_16
+          chronological: true
+          environmentVariables:
+            env1: value1
+            env2: value2
+#           integrations:
+#             - name: dockerHubIntegration
+#             - name: artifactoryIntegration  
+          inputResources:
+            - name: gitResource
+              trigger: true    # default true
+#           outputResources:
+#             - name: myOutputResource1  
+          runtime:       
+            type: image       #<image/host>
+            image:
+              auto:
+                language:go
+                versions:1.12.6
+              custom:
+                name: drydock/u16node
+                tag: master
+#                 registry: art
+#                 sourceRepository: docker # required if registry is artifactory
+#                 region: <string> # required if registry is AWS
+#                 options:
+                
+      - name: test2
+        type: Bash
+        configuration:
+          affinityGroup: bldGroup 
+          priority: 0
+          timeoutSeconds: 50000
+          nodePool: ubuntu_16
+          chronological: true
+          environmentVariables:
+            env1: value1
+            env2: value2
+#           integrations:
+#             - name: dockerHubIntegration
+#             - name: artifactoryIntegration  
+          inputSteps:
+            - name: test1
+          inputResources:
+            - name: gitResource
+              trigger: true    # default true
+#           outputResources:
+#             - name: myOutputResource1  
+          runtime:       
+            type: image       #<image/host>
+            image:
+              auto:
+                language:go
+                versions:1.12.6
+              custom:
+                name: drydock/u16node
+                tag: master
+#                 registry: art
+#                 sourceRepository: docker # required if registry is artifactory
+#                 region: <string> # required if registry is AWS
+#                 options:
+        execution:
+          onExecute:
+            - echo "test2"  
 
+      - name: test3
+        type: Bash
+        configuration:
+          affinityGroup: bldGroup 
+          priority: 0
+          timeoutSeconds: 50000
+          nodePool: ubuntu_16
+          chronological: true
+          environmentVariables:
+            env1: value1
+            env2: value2
+#           integrations:
+#             - name: dockerHubIntegration
+#             - name: artifactoryIntegration  
+          inputSteps:
+            - name: test2
+          inputResources:
+            - name: gitResource
+              trigger: true    # default true
+#           outputResources:
+#             - name: myOutputResource1  
+          runtime:       
+            type: image       #<image/host>
+            image:
+              auto:
+                language:go
+                versions:1.12.6
+              custom:
+                name: drydock/u16node
+                tag: master
+#                 registry: art
+#                 sourceRepository: docker # required if registry is artifactory
+#                 region: <string> # required if registry is AWS
+#                 options:
+        execution:
+          onExecute:
+            - echo "Test3"
+
+      - name: test4
+        type: Bash
+        configuration:
+          affinityGroup: bldGroup 
+          priority: 0
+          timeoutSeconds: 50000
+          nodePool: ubuntu_16
+          chronological: true
+          environmentVariables:
+            env1: value1
+            env2: value2
+#           integrations:
+#             - name: dockerHubIntegration
+#             - name: artifactoryIntegration  
+          inputSteps:
+            - name: test3
+          inputResources:
+            - name: gitResource
+              trigger: true    # default true
+#           outputResources:
+#             - name: myOutputResource1  
+          runtime:       
+            type: image       #<image/host>
+            image:
+              auto:
+                language:go
+                versions:1.12.6
+              custom:
+                name: drydock/u16node
+                tag: master
+#                 registry: art
+#                 sourceRepository: docker # required if registry is artifactory
+#                 region: <string> # required if registry is AWS
+#                 options:
+        execution:
+          onExecute:
+            - echo "test4"           
+              
