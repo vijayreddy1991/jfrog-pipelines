@@ -7,8 +7,6 @@ resources:
       files:  # optional
         include: pipelines.yml
         exclude: readme
-#         except: <regular expression>
-#         only: <regular expression>
       branches:  # optional
         include: master
         exclude: git
@@ -35,7 +33,8 @@ pipelines:
         image:
           auto:
             language:go
-            versions:1.12.6
+            versions
+              - 1.12.6
           custom:
             name: drydock/u18node
             tag: master
@@ -68,7 +67,8 @@ pipelines:
             image:
               auto:
                 language:go
-                versions:1.12.6
+                versions
+                  - 1.12.6
               custom:
                 name: drydock/u16node
                 tag: master
@@ -103,7 +103,8 @@ pipelines:
             image:
               auto:
                 language:go
-                versions:1.12.6
+                versions
+                  - 1.12.6
               custom:
                 name: drydock/u16node
                 tag: master
@@ -141,7 +142,8 @@ pipelines:
             image:
               auto:
                 language:go
-                versions:1.12.6
+                versions
+                  - 1.12.6
               custom:
                 name: drydock/u16node
                 tag: master
@@ -179,7 +181,8 @@ pipelines:
             image:
               auto:
                 language:go
-                versions:1.12.6
+                versions
+                  - 1.12.6
               custom:
                 name: drydock/u16node
                 tag: master
