@@ -122,7 +122,7 @@ pipelines:
       - name: test3
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: vijay 
           priority: 0
           timeoutSeconds: 50000
           nodePool: ubuntu_16
@@ -161,7 +161,7 @@ pipelines:
       - name: test4
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: vijay
           priority: 0
           timeoutSeconds: 50000
           nodePool: ubuntu_16
