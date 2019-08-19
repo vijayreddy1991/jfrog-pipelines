@@ -49,7 +49,7 @@ pipelines:
           affinityGroup: bldGroup 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+          nodePool: ranjithr_pool
           chronological: true
           environmentVariables:
             env1: value1
@@ -87,7 +87,7 @@ pipelines:
           affinityGroup: bldGroup 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+          nodePool: ranjithr_pool
           chronological: true
           environmentVariables:
             env1: value1
@@ -127,7 +127,7 @@ pipelines:
           affinityGroup: vijay 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+          nodePool: ranjithr_pool
           chronological: true
           environmentVariables:
             env1: value1
@@ -167,7 +167,7 @@ pipelines:
           affinityGroup: vijay
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+          nodePool: ranjithr_pool
           chronological: true
           environmentVariables:
             env1: value1
