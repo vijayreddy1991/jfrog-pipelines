@@ -79,6 +79,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test1"  
+            - printenv
                 
       - name: test2
         type: Bash
@@ -118,6 +119,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"  
+            - printenv
 
       - name: test3
         type: Bash
@@ -157,6 +159,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
+            - printenv
 
       - name: test4
         type: Bash
@@ -195,5 +198,6 @@ pipelines:
 #                 options:
         execution:
           onExecute:
-            - echo "test4"           
+            - echo "test4"  
+            - printenv
               
