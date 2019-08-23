@@ -23,18 +23,18 @@ resources:
       
 pipelines:
   - name: jfrog_pipeline
-    configuration:
-      environmentVariables:
-        readOnly:
-          ENV1: value1
-          ENV2: value2    
-      runtime:       
-        type: image       #<image/host>
-        image:
-          auto:
-            language: go
-            versions:
-              - 1.12.5
+#     configuration:
+#       environmentVariables:
+#         readOnly:
+#           ENV1: value1
+#           ENV2: value2    
+#       runtime:       
+#         type: image       #<image/host>
+#         image:
+#           auto:
+#             language: go
+#             versions:
+#               - 1.12.5
 #           custom:
 #             name: drydock/u18node
 #             tag: master
@@ -46,16 +46,16 @@ pipelines:
       - name: test1
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: debain 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ranjithr_pool
+          nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
             env2: value2
-#           integrations:
-#             - name: dockerHubIntegration
+          integrations:
+            - name: keys
 #             - name: artifactoryIntegration  
           inputResources:
             - name: repo
@@ -79,15 +79,16 @@ pipelines:
         execution:
           onExecute:
             - echo "test1"  
+            - echo "$vijay"
             - printenv
                 
       - name: test2
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: debain 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ranjithr_pool
+          nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
@@ -124,10 +125,10 @@ pipelines:
       - name: test3
         type: Bash
         configuration:
-          affinityGroup: vijay 
+          affinityGroup: rpm
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ranjithr_pool
+          nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
@@ -164,10 +165,10 @@ pipelines:
       - name: test4
         type: Bash
         configuration:
-          affinityGroup: vijay
+          affinityGroup: rpm
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ranjithr_pool
+          nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
