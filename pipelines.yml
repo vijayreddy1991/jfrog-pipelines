@@ -2,7 +2,7 @@ resources:
   - name: repo
     type: GitRepo
     configuration:
-      gitProvider: vijay_github
+      gitProvider: github
       path: vijayreddy1991/jfrog-pipelines
       files:  # optional
         include: pipelines.yml
@@ -62,13 +62,13 @@ pipelines:
               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
-          runtime:       
-            type: image       #<image/host>
-            image:
-              auto:
-                language: go
-                versions:
-                  - 1.12.5
+#           runtime:       
+#             type: image       #<image/host>
+#             image:
+#               auto:
+#                 language: go
+#                 versions:
+#                   - 1.12.5
 #               custom:
 #                 name: drydock/u16node
 #                 tag: master
@@ -81,6 +81,9 @@ pipelines:
             - echo "test1"  
             - echo "$vijay"
             - printenv
+            - terraform -v
+            - terraform init
+            - terraform apply -auto-approve
                 
       - name: test2
         type: Bash
