@@ -81,7 +81,7 @@ pipelines:
             - echo "test1"  
             - echo "$vijay"
             - printenv
-            - pushd $res_repo_resourcePath
+            - cd $res_repo_resourcePath
             - ls -la
             - sudo apt-get update
             - sudo apt-get install wget unzip
@@ -91,7 +91,6 @@ pipelines:
             - terraform init
             - pwd
             - terraform apply -auto-approve
-            - popd
                 
       - name: test2
         type: Bash
