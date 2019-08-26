@@ -1,5 +1,5 @@
 resources:
-  - name: repo
+  - name: repo_vijay
     type: GitRepo
     configuration:
       gitProvider: github
@@ -13,8 +13,8 @@ resources:
 #       tags:  # optional
 #         include: 
 #         exclude: 
-      buildOn:  # optional
-        commit: true
+#       buildOn:  # optional
+#         commit: true
 #          pullRequestCreate: true
 #          pullRequestClose: false
 #          releaseCreate: false
@@ -50,7 +50,7 @@ pipelines:
           priority: 0
           timeoutSeconds: 50000
           nodePool: ubuntu_16
-          chronological: true
+#           chronological: true
           environmentVariables:
             env1: value1
             env2: value2
@@ -58,7 +58,7 @@ pipelines:
             - name: keys
 #             - name: artifactoryIntegration  
           inputResources:
-            - name: repo
+            - name: repo_vijay
               trigger: true    # default true
 #           outputResources:
 #             - name: myOutputResource1  
@@ -82,8 +82,8 @@ pipelines:
             - echo "$vijay"
             - printenv
             - pwd
-            - echo $res_repo_resourcePath
-            - cd $res_repo_resourcePath
+            - echo $res_repo_vijay_resourcePath
+            - cd $res_repo_vijay_resourcePath
             - pwd
             - ls -la
             - sudo apt-get update
