@@ -49,7 +49,7 @@ pipelines:
           affinityGroup: debain 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+#           nodePool: ubuntu_16
 #           chronological: true
           environmentVariables:
             env1: value1
@@ -101,7 +101,7 @@ pipelines:
           affinityGroup: debain 
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+#           nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
@@ -141,7 +141,7 @@ pipelines:
           affinityGroup: rpm
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+#           nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
@@ -181,7 +181,7 @@ pipelines:
           affinityGroup: rpm
           priority: 0
           timeoutSeconds: 50000
-          nodePool: ubuntu_16
+#           nodePool: ubuntu_16
           chronological: true
           environmentVariables:
             env1: value1
