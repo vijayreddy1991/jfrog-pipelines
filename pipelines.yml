@@ -4,22 +4,22 @@ resources:
     configuration:
       gitProvider: github
       path: vijayreddy1991/jfrog-pipelines
-      files:  # optional
-        include: pipelines.yml
-        exclude: readme
-      branches:  # optional
-        include: master
-        exclude: git
-#       tags:  # optional
-#         include: 
-#         exclude: 
-      buildOn:  # optional
-         commit: false
-         pullRequestCreate: false
-         pullRequestClose: false
-         releaseCreate: false
-         tagCreate: false
-      shallowDepth: 10  # optional 
+#       files:  # optional
+#         include: pipelines.yml
+#         exclude: readme
+#       branches:  # optional
+#         include: master
+#         exclude: git
+# #       tags:  # optional
+# #         include: 
+# #         exclude: 
+#       buildOn:  # optional
+#          commit: false
+#          pullRequestCreate: false
+#          pullRequestClose: false
+#          releaseCreate: false
+#          tagCreate: false
+#       shallowDepth: 10  # optional 
       
 pipelines:
   - name: jfrog_pipeline
@@ -88,8 +88,8 @@ pipelines:
             - ls -la
             - sudo apt-get update
             - sudo apt-get install wget unzip
-            - wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
-            - sudo unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin/
+#             - wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
+#             - sudo unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin/
             - terraform --version
             - terraform init
             - pwd
