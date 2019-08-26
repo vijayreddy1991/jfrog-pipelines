@@ -83,7 +83,7 @@ pipelines:
             - printenv
             - pwd
             - echo $res_repo_vijay_resourcePath
-            - cd $res_repo_vijay_resourcePath
+            - pushd $res_repo_vijay_resourcePath
             - pwd
             - ls -la
             - sudo apt-get update
@@ -94,6 +94,7 @@ pipelines:
             - terraform init
             - pwd
             - terraform apply -auto-approve
+            - popd
                 
       - name: test2
         type: Bash
