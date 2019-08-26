@@ -10,12 +10,12 @@ resources:
 #       branches:  # optional
 #         include: master
 #         exclude: git
-# #       tags:  # optional
-# #         include: 
-# #         exclude: 
-#       buildOn:  # optional
-#          commit: false
-#          pullRequestCreate: false
+#       tags:  # optional
+#         include: 
+#         exclude: 
+      buildOn:  # optional
+        commit: true
+#          pullRequestCreate: true
 #          pullRequestClose: false
 #          releaseCreate: false
 #          tagCreate: false
