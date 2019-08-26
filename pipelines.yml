@@ -7,8 +7,8 @@ resources:
 #       files:  # optional
 #         include: pipelines.yml
 #         exclude: readme
-       branches:  # optional
-         include: debain
+      branches:  # optional
+        include: debain
 #         exclude: git
 #       tags:  # optional
 #         include: 
