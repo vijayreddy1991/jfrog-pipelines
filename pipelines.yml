@@ -81,7 +81,10 @@ pipelines:
             - echo "test1"  
             - echo "$vijay"
             - printenv
+            - pwd
+            - echo $res_repo_resourcePath
             - cd $res_repo_resourcePath
+            - pwd
             - ls -la
             - sudo apt-get update
             - sudo apt-get install wget unzip
