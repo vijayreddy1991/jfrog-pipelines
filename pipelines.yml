@@ -81,7 +81,7 @@ pipelines:
             - echo "test1"  
             - echo "$vijay"
             - printenv
-            - terraform -v
+            - terraform --version
             - terraform init
             - terraform apply -auto-approve
                 
